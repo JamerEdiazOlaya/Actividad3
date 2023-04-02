@@ -6,7 +6,7 @@ def login():
     password = password_entry.get()
     
     # Realizar una petición al servidor para autenticar al usuario
-    response = requests.post('http://localhost:5000/login', json={'username': username, 'password': password})
+    response = requests.post('http://127.0.0.1:8000/login', json={'username': username, 'password': password})
     
     if response.json()['status'] == 'OK':
         # Si la autenticación es exitosa, mostrar un mensaje de bienvenida
